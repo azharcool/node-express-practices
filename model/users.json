@@ -1,0 +1,27 @@
+[
+  {
+    "username": "cool11",
+    "password": "$2b$10$PVADCpiyBg4Bk.tzYwpAFehpin46morb8aR3v9cMjYs20.IYLwDse",
+    "refreshToken": "",
+    "roles": {
+      "Admin": 5150,
+      "User": 2004,
+      "Editor": 1984
+    }
+  },
+  {
+    "username": "alluser",
+    "password": "$2b$10$rxOiJXrXJ7Ep6ntLL1yOJ.fxxXQSxWKMYNK69C8rjQH/eHIRmip7u",
+    "roles": {
+      "User": 2004
+    }
+  },
+  {
+    "username": "editor",
+    "password": "$2b$10$rfBvf3UcqjkIHDqTlIAPmOZBzvlpXAJNZHOr6j//2.PFmSgcubTca",
+    "roles": {
+      "User": 2004,
+      "Editor": 1984
+    }
+  }
+]
