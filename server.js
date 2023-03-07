@@ -12,10 +12,10 @@ const verifyJwt = require("./middleware/verifyJWT");
 const cookieParser = require("cookie-parser");
 const credentials = require("./middleware/crendentials");
 const mongoose = require("mongoose");
-mongoose.set('strictQuery', false); 
+mongoose.set("strictQuery", false);
 const connectDB = require("./config/dbConn");
 
-connectDB();
+// connectDB();
 
 //* Custom Middleware logger
 app.use(logger);
@@ -67,7 +67,12 @@ app.all("*", (req, res) => {
 //* Custom error
 app.use(errorHandler);
 
-mongoose.connection.once("open", () => {
+connectDB().then(() => {
+  mongoose.connection.once("open", () => {
+    // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  });
   console.log("connected to mongoDB");
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-});
+}).catch(err => {
+  console.log("error-ConnectDB", err)
+})
