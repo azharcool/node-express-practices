@@ -1,5 +1,5 @@
+require("dotenv").config();
 const User = require("../model/User");
-
 const bcrypt = require("bcrypt");
 // const fsPromise = require("fs").promises;
 // const path = require("path");

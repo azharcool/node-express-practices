@@ -1,4 +1,4 @@
-require("dotenv").config();
+const dotEnv = require("dotenv");
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -14,6 +14,8 @@ const credentials = require("./middleware/crendentials");
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 const connectDB = require("./config/dbConn");
+
+dotEnv.config();
 
 // connectDB();
 
